@@ -1,0 +1,368 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>2026 Updates for Colorectal Cancer — Guidelines & Trials</title>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:ital,opsz,wght@0,6..72,400;0,6..72,500;0,6..72,600;1,6..72,400&family=Inter:wght@400;500;600;700&family=IBM+Plex+Mono:wght@400;500&display=swap" rel="stylesheet">
+<style>
+:root{
+  --ink:#10231f;
+  --deep:#0c3b32;
+  --teal:#1c6b5a;
+  --moss:#5d8a6f;
+  --sage:#a8c2ad;
+  --paper:#f4f1e8;
+  --paper2:#ece7d8;
+  --line:#d8d2c0;
+  --gold:#c08a2e;
+  --white:#ffffff;
+}
+*{margin:0;padding:0;box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  font-family:'Inter',sans-serif;
+  background:var(--paper);
+  color:var(--ink);
+  line-height:1.55;
+  -webkit-font-smoothing:antialiased;
+}
+.wrap{max-width:1080px;margin:0 auto;padding:0 28px}
+
+/* ===== top bar ===== */
+.topbar{
+  position:sticky;top:0;z-index:50;
+  background:rgba(244,241,232,.85);
+  backdrop-filter:blur(10px);
+  border-bottom:1px solid var(--line);
+}
+.topbar .wrap{display:flex;align-items:center;justify-content:space-between;height:62px}
+.brand{font-family:'IBM Plex Mono',monospace;font-size:13px;letter-spacing:.04em;color:var(--deep);font-weight:500}
+.brand b{color:var(--gold)}
+.nav{display:flex;gap:26px}
+.nav a{font-size:13.5px;color:var(--teal);text-decoration:none;font-weight:500;transition:color .2s}
+.nav a:hover{color:var(--gold)}
+@media(max-width:720px){.nav{display:none}}
+
+/* ===== hero ===== */
+.hero{
+  background:
+    radial-gradient(120% 90% at 85% -10%, rgba(192,138,46,.12), transparent 60%),
+    linear-gradient(165deg,var(--deep) 0%, var(--ink) 100%);
+  color:var(--paper);
+  padding:90px 0 76px;
+  position:relative;
+  overflow:hidden;
+}
+.hero::after{
+  content:"";position:absolute;right:-120px;top:-60px;
+  width:420px;height:420px;border:1px solid rgba(168,194,173,.18);
+  border-radius:50%;
+}
+.hero::before{
+  content:"";position:absolute;right:30px;bottom:-200px;
+  width:300px;height:300px;border:1px solid rgba(168,194,173,.12);
+  border-radius:50%;
+}
+.eyebrow{
+  font-family:'IBM Plex Mono',monospace;font-size:12.5px;letter-spacing:.18em;
+  text-transform:uppercase;color:var(--sage);margin-bottom:24px;
+}
+.eyebrow span{color:var(--gold)}
+.hero h1{
+  font-family:'Newsreader',serif;font-weight:500;
+  font-size:clamp(40px,6.4vw,72px);line-height:1.02;letter-spacing:-.01em;
+  max-width:14ch;
+}
+.hero h1 em{font-style:italic;color:var(--sage)}
+.hero .sub{
+  margin-top:22px;font-size:18px;color:#d6dcd0;max-width:46ch;font-weight:400;
+}
+.meta-row{
+  margin-top:46px;display:flex;flex-wrap:wrap;gap:0;
+  border-top:1px solid rgba(168,194,173,.25);
+  position:relative;z-index:2;
+}
+.meta{
+  padding:22px 34px 4px 0;margin-right:34px;
+  border-right:1px solid rgba(168,194,173,.18);
+}
+.meta:last-child{border-right:none}
+.meta .k{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--sage)}
+.meta .v{font-family:'Newsreader',serif;font-size:21px;margin-top:6px;color:var(--paper)}
+.meta .v small{display:block;font-family:'Inter';font-size:13px;color:#c2cabd;margin-top:3px}
+
+/* ===== intro band ===== */
+.band{background:var(--paper2);border-bottom:1px solid var(--line)}
+.band .wrap{padding:34px 28px;display:flex;flex-wrap:wrap;gap:30px;align-items:center;justify-content:space-between}
+.band p{font-family:'Newsreader',serif;font-size:20px;font-style:italic;color:var(--deep);max-width:54ch;line-height:1.4}
+.cta{
+  display:inline-flex;align-items:center;gap:9px;
+  background:var(--deep);color:var(--paper);
+  font-weight:600;font-size:14.5px;
+  padding:13px 24px;border-radius:40px;text-decoration:none;
+  white-space:nowrap;transition:background .2s,transform .2s;
+}
+.cta:hover{background:var(--gold);color:#1a1500;transform:translateY(-1px)}
+
+/* ===== program ===== */
+.section{padding:78px 0}
+.sec-head{display:flex;align-items:baseline;gap:18px;margin-bottom:8px}
+.sec-head .num{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--gold);letter-spacing:.08em}
+.sec-head h2{font-family:'Newsreader',serif;font-weight:500;font-size:clamp(28px,4vw,40px);color:var(--ink);letter-spacing:-.01em}
+.sec-note{color:#5e6b62;font-size:15px;margin-bottom:44px;max-width:60ch}
+
+.block{
+  background:var(--white);
+  border:1px solid var(--line);
+  border-radius:14px;
+  margin-bottom:18px;
+  overflow:hidden;
+  transition:box-shadow .25s,transform .25s;
+}
+.block:hover{box-shadow:0 14px 34px -22px rgba(12,59,50,.4);transform:translateY(-2px)}
+.block-top{
+  display:flex;gap:20px;align-items:flex-start;
+  padding:24px 28px;
+  background:linear-gradient(90deg,rgba(28,107,90,.06),transparent);
+  border-bottom:1px solid var(--paper2);
+}
+.tag{
+  flex:none;font-family:'IBM Plex Mono',monospace;
+  font-size:11px;letter-spacing:.08em;text-transform:uppercase;
+  color:var(--white);background:var(--teal);
+  padding:6px 11px;border-radius:6px;font-weight:500;white-space:nowrap;
+}
+.tag.special{background:var(--gold)}
+.tag.break{background:var(--sage);color:var(--deep)}
+.block-top .info{flex:1}
+.block-top h3{font-family:'Newsreader',serif;font-weight:500;font-size:22px;color:var(--deep);line-height:1.25}
+.block-top .time{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--gold);margin-top:5px}
+.chairs{font-size:13.5px;color:#5e6b62;margin-top:9px;line-height:1.45}
+.chairs b{color:var(--teal);font-weight:600}
+
+.talks{list-style:none;padding:8px 28px 18px}
+.talk{
+  display:flex;gap:16px;padding:14px 0;border-bottom:1px solid var(--paper2);
+}
+.talk:last-child{border-bottom:none}
+.talk .ti{
+  flex:none;width:26px;height:26px;border-radius:50%;
+  background:var(--paper2);color:var(--teal);
+  font-family:'IBM Plex Mono',monospace;font-size:13px;font-weight:500;
+  display:flex;align-items:center;justify-content:center;margin-top:2px;
+}
+.talk .body .t{font-size:15.5px;font-weight:600;color:var(--ink);line-height:1.4}
+.talk .body .sp{font-size:13.5px;color:#6b7770;margin-top:3px}
+.talk.discuss{opacity:.85}
+.talk.discuss .ti{background:transparent;color:var(--sage)}
+.talk.discuss .body .t{font-style:italic;font-weight:500;font-family:'Newsreader',serif;font-size:16px}
+
+.break-row{
+  display:flex;align-items:center;gap:16px;
+  padding:16px 28px;margin-bottom:18px;
+  background:var(--paper2);border-radius:10px;
+  border:1px dashed var(--line);
+}
+.break-row .lbl{font-family:'Newsreader',serif;font-style:italic;font-size:17px;color:var(--moss)}
+.break-row .tm{font-family:'IBM Plex Mono',monospace;font-size:13px;color:#7a857b;margin-left:auto}
+
+/* ceremony rows */
+.cer{display:flex;gap:16px;align-items:center;padding:14px 0;border-bottom:1px solid var(--line)}
+.cer:last-child{border-bottom:none}
+.cer .tm{font-family:'IBM Plex Mono',monospace;font-size:13px;color:var(--gold);min-width:108px}
+.cer .nm{font-size:15.5px;color:var(--ink);font-weight:500}
+
+/* ===== info / footer ===== */
+.info-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(220px,1fr));gap:1px;background:var(--line);border:1px solid var(--line);border-radius:14px;overflow:hidden}
+.info-cell{background:var(--white);padding:26px 24px}
+.info-cell .k{font-family:'IBM Plex Mono',monospace;font-size:11px;letter-spacing:.12em;text-transform:uppercase;color:var(--gold);margin-bottom:10px}
+.info-cell .v{font-size:15.5px;color:var(--ink);line-height:1.5}
+.info-cell .v strong{font-family:'Newsreader',serif;font-weight:500;font-size:18px;display:block;margin-bottom:2px;color:var(--deep)}
+
+footer{background:var(--ink);color:#bcc6bd;padding:54px 0 40px;margin-top:78px}
+footer .wrap{display:flex;flex-wrap:wrap;gap:28px;justify-content:space-between;align-items:flex-end}
+footer h4{font-family:'Newsreader',serif;font-weight:500;font-size:24px;color:var(--paper);margin-bottom:8px}
+footer .org{font-size:14px;line-height:1.6}
+footer .org b{color:var(--sage)}
+footer .credit{font-family:'IBM Plex Mono',monospace;font-size:11.5px;color:#6f7d72;letter-spacing:.04em}
+
+@media(max-width:600px){
+  .block-top{flex-direction:column;gap:12px}
+  .meta{margin-right:0;border-right:none;padding-right:0}
+  .meta-row{flex-direction:column;gap:0}
+  .meta{border-bottom:1px solid rgba(168,194,173,.18);padding-bottom:16px;width:100%}
+}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <div class="wrap">
+    <div class="eyebrow">Guideline Symposium · <span>July 11, 2026</span></div>
+    <h1>2026 Updates for Colorectal Cancer<br><em>Guidelines &amp; Trials</em></h1>
+
+    <div class="meta-row">
+      <div class="meta">
+        <div class="k">Date</div>
+        <div class="v">Sat, July 11 2026<small>09:00 – 17:15 (KST)</small></div>
+      </div>
+      <div class="meta">
+        <div class="k">Venue</div>
+        <div class="v">National Cancer Center<small>Int'l Conference Hall, 8F</small></div>
+      </div>
+      <div class="meta">
+        <div class="k">Language</div>
+        <div class="v">English<small>Official language</small></div>
+      </div>
+    </div>
+  </div>
+</header>
+
+<div class="band">
+  <div class="wrap">
+    <p>“Four sessions, one special session — from early CRC screening to ctDNA-directed adjuvant therapy.”</p>
+    <a class="cta" href="#program">QR Registration →</a>
+  </div>
+</div>
+
+<main class="section wrap" id="program">
+  <div class="sec-head"><span class="num">PROGRAM</span><h2>Program Schedule</h2></div>
+
+  <!-- Opening -->
+  <div class="block">
+    <div class="block-top">
+      <span class="tag break">Open</span>
+      <div class="info">
+        <h3>Registration &amp; Opening Ceremony</h3>
+        <div class="time">08:00 – 09:00</div>
+      </div>
+    </div>
+    <div class="talks" style="padding-top:6px">
+      <div class="cer"><span class="tm">08:00–08:50</span><span class="nm">Registration</span></div>
+      <div class="cer"><span class="tm">08:50–09:00</span><span class="nm">Opening Ceremony</span></div>
+    </div>
+  </div>
+
+  <!-- Session 1 -->
+  <div class="block">
+    <div class="block-top">
+      <span class="tag">Session 1</span>
+      <div class="info">
+        <h3>Screening &amp; Treatment for Early CRC</h3>
+        <div class="time">09:00 – 10:00</div>
+        <div class="chairs">Chairs: <b>Kyung Su Han</b> (National Cancer Center) · <b>Jae Myung Cha</b> (Kyung Hee Univ. Gangdong)</div>
+      </div>
+    </div>
+    <ul class="talks">
+      <li class="talk"><span class="ti">1</span><div class="body"><div class="t">Guideline Review: Korean Screening Guideline</div><div class="sp">EunKyo Kang (NCC)</div></div></li>
+      <li class="talk"><span class="ti">2</span><div class="body"><div class="t">Management of T1 Colorectal Cancer</div><div class="sp">Jong Sung Ahn (NCC)</div></div></li>
+      <li class="talk"><span class="ti">3</span><div class="body"><div class="t">Non-invasive Screening Biomarkers: Beyond Stool DNA / Blood-based Screening</div><div class="sp">Jae Myung Cha (Kyung Hee Univ. Gangdong)</div></div></li>
+      <li class="talk discuss"><span class="ti">·</span><div class="body"><div class="t">Discussion</div></div></li>
+    </ul>
+  </div>
+
+  <!-- Session 2 -->
+  <div class="block">
+    <div class="block-top">
+      <span class="tag">Session 2</span>
+      <div class="info">
+        <h3>Rectal Cancer: Maximizing Organ Preservation</h3>
+        <div class="time">10:00 – 11:00</div>
+        <div class="chairs">Chairs: <b>Seung Yong Jeong</b> (Seoul National Univ. Hospital) · <b>Byung Soh Min</b> (Severance Hospital)</div>
+      </div>
+    </div>
+    <ul class="talks">
+      <li class="talk"><span class="ti">1</span><div class="body"><div class="t">Guideline Review: Organ Preservation</div><div class="sp">Kiho You (National Cancer Center)</div></div></li>
+      <li class="talk"><span class="ti">2</span><div class="body"><div class="t">Toward a Korean Multicenter Watch-and-Wait Registry: Building the Foundation for Korean Guidelines</div><div class="sp">Youn Young Park (Kyung Hee Univ. Gangdong)</div></div></li>
+      <li class="talk"><span class="ti">3</span><div class="body"><div class="t">TNT in Locally Advanced Rectal Cancer: Interim Analysis of the TV-LARK Trial</div><div class="sp">Min Jung Kim (Seoul National Univ. Hospital)</div></div></li>
+      <li class="talk discuss"><span class="ti">·</span><div class="body"><div class="t">Discussion</div></div></li>
+    </ul>
+  </div>
+
+  <div class="break-row"><span class="lbl">☕ Coffee Break</span><span class="tm">11:00 – 11:20</span></div>
+
+  <!-- Special Session -->
+  <div class="block">
+    <div class="block-top">
+      <span class="tag special">Special</span>
+      <div class="info">
+        <h3>CRC in the Super-Aging Society: Perspectives from Korea &amp; Japan</h3>
+        <div class="time">11:20 – 12:15</div>
+        <div class="chairs">Chair: <b>Sung Chan Park</b> (National Cancer Center)</div>
+      </div>
+    </div>
+    <ul class="talks">
+      <li class="talk"><span class="ti">JP</span><div class="body"><div class="t">Chemotherapy for Elderly Patients with Colorectal Cancer</div><div class="sp">Atsushi Takashima (National Cancer Center, Japan)</div></div></li>
+      <li class="talk"><span class="ti">KR</span><div class="body"><div class="t">From Surgery to Chemotherapy: Comprehensive Pathways with ERAS &amp; Prehabilitation for Elderly Patients</div><div class="sp">In Kyu Lee (Seoul St. Mary's Hospital)</div></div></li>
+      <li class="talk discuss"><span class="ti">·</span><div class="body"><div class="t">Case Discussion — Dong Woon Lee (NCC)</div></div></li>
+    </ul>
+  </div>
+
+  <div class="break-row"><span class="lbl">🍽 Lunch</span><span class="tm">12:15 – 13:30</span></div>
+
+  <!-- Session 3 -->
+  <div class="block">
+    <div class="block-top">
+      <span class="tag">Session 3</span>
+      <div class="info">
+        <h3>Precision Oncology in Metastatic CRC</h3>
+        <div class="time">13:30 – 15:45</div>
+        <div class="chairs">Chairs: <b>Sang Cheul Oh</b> (Korea Univ. Guro) · <b>Sun Jin Sym</b> (Gachon Univ. Gil)</div>
+      </div>
+    </div>
+    <ul class="talks">
+      <li class="talk"><span class="ti">1</span><div class="body"><div class="t">Guidelines — Management of Metastatic CRC</div><div class="sp">Joo Hyun Hong (National Cancer Center)</div></div></li>
+      <li class="talk"><span class="ti">2</span><div class="body"><div class="t">Biomarker-Driven Evolution in Metastatic CRC</div><div class="sp">Jun Ho Lee (Kyung Hee University)</div></div></li>
+      <li class="talk"><span class="ti">3</span><div class="body"><div class="t">Optimizing Immunotherapy for dMMR/MSI-H mCRC: First-line and Beyond</div><div class="sp">Sun Young Kim (Asan Medical Center)</div></div></li>
+      <li class="talk"><span class="ti">4</span><div class="body"><div class="t">Oligometastasis: Local Therapy</div><div class="sp">Nalee Kim (Samsung Medical Center)</div></div></li>
+      <li class="talk discuss"><span class="ti">·</span><div class="body"><div class="t">Discussion</div></div></li>
+    </ul>
+  </div>
+
+  <div class="break-row"><span class="lbl">☕ Coffee Break</span><span class="tm">15:45 – 16:00</span></div>
+
+  <!-- Session 4 -->
+  <div class="block">
+    <div class="block-top">
+      <span class="tag">Session 4</span>
+      <div class="info">
+        <h3>Ongoing Multicenter Trials</h3>
+        <div class="time">16:00 – 17:15</div>
+        <div class="chairs">Chair: <b>Sung-Bum Kang</b> (Seoul National Univ. Bundang Hospital)</div>
+      </div>
+    </div>
+    <ul class="talks">
+      <li class="talk"><span class="ti">1</span><div class="body"><div class="t">Changing Landscape of Multicenter CRC Trials in Japan</div><div class="sp">Akira Ouchi (Aichi Cancer Center)</div></div></li>
+      <li class="talk"><span class="ti">2</span><div class="body"><div class="t">Development of Korean Quality Improvement Platform in Colon &amp; Rectal Surgery (K-QIPS)</div><div class="sp">Sun Jin Park (Kyung Hee University)</div></div></li>
+      <li class="talk"><span class="ti">3</span><div class="body"><div class="t">Refining Rectal Cancer Surgery: Oncological Outcomes of Robotic Surgery &amp; taTME</div><div class="sp">Sung Chan Park (NCC)</div></div></li>
+      <li class="talk"><span class="ti">4</span><div class="body"><div class="t">ctDNA Multicenter Trial — Platform Study of Circulating Tumor DNA Directed Adjuvant Chemotherapy in Colon Cancer (CLAUDIA, KCSG CO22-12)</div><div class="sp">Minsu Kang (Seoul National Univ. Bundang)</div></div></li>
+      <li class="talk discuss"><span class="ti">·</span><div class="body"><div class="t">Discussion</div></div></li>
+    </ul>
+  </div>
+
+  <!-- Closing -->
+  <div class="block">
+    <div class="block-top">
+      <span class="tag break">Close</span>
+      <div class="info">
+        <h3>Closing Remark</h3>
+        <div class="time">17:15</div>
+        <div class="chairs">Sung Chan Park — Chief, Center for Colorectal Cancer, National Cancer Center</div>
+      </div>
+    </div>
+  </div>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div>
+      <h4>2026 Updates for Colorectal Cancer</h4>
+    </div>
+  </div>
+</footer>
+
+</body>
+</html>
